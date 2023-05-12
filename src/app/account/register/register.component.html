@@ -1,0 +1,17 @@
+<div class="main">
+    <div class="firstDiv">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit(this.registerForm)">
+            <div class="formDiv">
+                    <span>شناسه کاربری</span>
+                    <input type="text" class="userName" formControlName="userName">
+                    <span>موبایل</span>
+                    <input type="text" class="password" formControlName="mobile">          
+                    <span>رمز عبور</span>
+                    <input type="password" class="password" formControlName="password">
+            </div>
+            <div class="formBtn">
+                <button type="submit">ثبت</button>
+            </div>
+        </form>
+    </div>
+</div>

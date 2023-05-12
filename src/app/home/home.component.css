@@ -1,0 +1,76 @@
+.section-cards {
+    display: flex;
+    justify-content: center;
+    right: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.card-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2%;
+
+
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5% green ;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 4px 5px 0 grey;
+}
+
+.card-header {
+    width: 100%;
+}
+
+.card-body {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.branchName {
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+    font-size: 18px;
+}
+
+.ipAddress {
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.portNumber {
+    text-align: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.card-footer {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-btn {
+    width: 50%;
+    background-color: #fd3512;
+    border: none;
+    border-radius: 25px;
+    padding: 4%;
+    font-size: large;
+}
+
+
+
+
