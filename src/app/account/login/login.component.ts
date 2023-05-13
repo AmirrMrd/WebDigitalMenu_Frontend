@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup , FormControl } from '@angular/forms';
+import { AccountService } from 'src/app/services/account.service';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { FormGroup , FormControl } from '@angular/forms';
 })
 export class LoginComponent {
 
+  constructor(private accountSer : AccountService){}
+
   loginForm = new FormGroup({
     userName: new FormControl(''),
     password: new FormControl(''),
@@ -16,8 +19,10 @@ export class LoginComponent {
 
 
 
-  onSubmit (data : any) {
+  public onSubmit (data : FormGroup) {
+    const username = data.controls['userName'].value;
+    const password = data.controls['password'].value;
+    this.accountSer.login(username , password);
     console.log('loginOk' , data);
-    
   }
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AccountService {
 
   private loggedIn : boolean = false;
-  constructor() { }
+  constructor( private router : Router) { }
 
   public isAthenticated () {
     return new Promise((resolve, reject) => {
@@ -19,6 +20,7 @@ export class AccountService {
   public login (user : string , password : string) {
     if (user === 'SEPIDZ' && password === '7990018720029848') {
       this.loggedIn = true;
+      this.router.navigate(['add-branch']);
       return this.loggedIn;
     }
     else {

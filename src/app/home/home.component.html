@@ -1,20 +1,20 @@
 <div class="section-cards">
     <div class="card-services">
-      <div class="card">
+      <div class="card" *ngFor="let Item of branchItem">
         <div class="card-header">
           <img
-            style="width: 100%; border-radius: 15px"
-            src="../../assets/barber1.png"
+            style="max-width: 200px; max-height: 200px; border-radius: 15px"
+            src="{{ Item.BranchLogoUrl }}"
             alt=""
           />
         </div>
         <div class="card-body">
-          <div class="branchName">Asssssssss</div>
-          <div class="ipAddress">bbbbbbbbbbbb</div>
-          <div class="portNumber">ssssssss</div>
+          <div class="branchName">{{ Item.BranchName }}</div>
+          <div class="branchDescription">{{ Item.BranchDescription }}</div>
+          <div class="portNumber"></div>
         </div>
         <div class="card-footer">
-          <button class="card-btn">sssssss</button>
+          <button class="card-btn">مشاهده</button>
         </div>
       </div>
     </div>

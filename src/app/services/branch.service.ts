@@ -24,4 +24,9 @@ export class BranchService {
     const url = `${this.baseUrl}/getallbranches`;
     return this.http.get(url,httpOptions);
   }
+
+  public createBranch (data : branch) {
+    const url = `${this.baseUrl}/createbranch`;
+    return this.http.post(url , data);
+  }
 }

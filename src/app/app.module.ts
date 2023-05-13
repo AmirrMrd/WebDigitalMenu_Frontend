@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddBranchComponent } from './branches/add-branch/add-branch.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { NotFoundComponent } from './account/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     AddBranchComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

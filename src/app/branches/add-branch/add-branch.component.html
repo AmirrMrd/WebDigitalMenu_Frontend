@@ -2,34 +2,36 @@
     <div class="firstDiv">
       <div class="branchLogo">
           <div class="branchimg">
-          <img src="../../../assets/background/bg-img.png" alt="">
+          <img [src]="ImgUrl" alt="">
           </div>
       </div>
-      <form action="">
+      <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch(this.addBranchForm)">
         <div class="formDiv">
           <span>نام شعبه</span>
-              <input type="text" class="branchName" />
+              <input type="text" class="branchName" formControlName="branchName" />
+          <span>کد شعبه</span>
+              <input type="text" class="branchName" formControlName="branchId" />
           <span>توضیحات</span>
-              <input type="text" class="branchDescription" />
+              <input type="text" class="branchDescription" formControlName="branchDescription" />
           <div class="branchDetailDiv">
             <div class="port">
               <span>Port</span>
-              <input type="text" />
+              <input type="text" formControlName="branchPort"/>
             </div>
             <div class="ipaddress">
               <span>Ip Address</span>
-              <input type="text" />
+              <input type="text" formControlName="branchIpAddress" />
             </div>
           </div>
           <span>لوگو</span>
-              <input type="file" class="logo">
+              <input type="file" class="logo" formControlName="branchLogoUrl" (change)="getUrl($event)">
           <div class="status">
           <span>فعال</span>
-              <input type="checkbox" class="active" name="" id="">
+              <input type="checkbox" class="active" name="" id="" formControlName="branchIsActive">
           </div>
         </div>
         <div class="formBtn">
-          <button>ثبت</button>
+          <button type="submit">ثبت</button>
         </div>
       </form>
     </div>
