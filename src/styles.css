@@ -4,7 +4,7 @@
     src: url(./assets/font/Yekan.ttf);
   }
   
-body, html {
+html {
     height: 100%;
 
 }
@@ -12,4 +12,5 @@ body, html {
 body {
     margin: 0%;
     font-family: mainFont;
+    height: 100%;
 }

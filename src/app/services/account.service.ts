@@ -18,7 +18,7 @@ export class AccountService {
   }
 
   public login (user : string , password : string) {
-    if (user === 'SEPIDZ' && password === '7990018720029848') {
+    if (user === 'S' && password === '123') {
       this.loggedIn = true;
       this.router.navigate(['add-branch']);
       return this.loggedIn;

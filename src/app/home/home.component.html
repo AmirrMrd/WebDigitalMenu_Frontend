@@ -1,5 +1,5 @@
-<div class="section-cards">
-    <div class="card-services">
+<!-- <div class="section-cards"> -->
+    <!-- <div class="card-services">
       <div class="card" *ngFor="let Item of branchItem">
         <div class="card-header">
           <img
@@ -17,5 +17,27 @@
           <button class="card-btn">مشاهده</button>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
+
+    <main>
+      <section class="cards">
+        <div class="card" *ngFor="let Item of branchItem">
+          <div class="card__image-container">
+            <img
+              src="{{ Item.ImageBase64 }}"
+            />
+          </div>
+          <div class="card__content">
+            <p class="card__title text--medium">
+              {{ Item.BranchName }}
+            </p>
+            <div class="card__info">
+              <p class="text--medium">{{ Item.BranchDescription }}</p>
+              <p class="card__price text--medium">سفارش</p>
+              <p class="card__price text--medium">ویرایش</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+        

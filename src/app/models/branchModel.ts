@@ -26,7 +26,8 @@ export interface branch {
     BranchIpAddress : string;
     BranchPortNumber: string;
     BranchDescription : string;
-    BranchLogoUrl : string;
     BranchIsActive : boolean;
+    ImageBase64 : string
+
 
 }

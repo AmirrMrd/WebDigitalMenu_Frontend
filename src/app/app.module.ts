@@ -8,8 +8,9 @@ import { RegisterComponent } from './account/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddBranchComponent } from './branches/add-branch/add-branch.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './account/not-found/not-found.component';
+import { EditComponent } from './branches/edit-branch/edit-branch.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NotFoundComponent } from './account/not-found/not-found.component';
     RegisterComponent,
     AddBranchComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

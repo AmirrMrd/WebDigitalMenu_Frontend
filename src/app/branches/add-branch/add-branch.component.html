@@ -2,32 +2,34 @@
     <div class="firstDiv">
       <div class="branchLogo">
           <div class="branchimg">
+          <img *ngIf="ImgUrl == ''" src="../../../assets/background/Square_200x200.png" alt="">
           <img [src]="ImgUrl" alt="">
           </div>
       </div>
-      <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch(this.addBranchForm)">
+      <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch()">
         <div class="formDiv">
           <span>نام شعبه</span>
               <input type="text" class="branchName" formControlName="branchName" />
+              <div *ngIf="submitted && f['branchName'].invalid">اسم شعبه اجباری است</div>
           <span>کد شعبه</span>
-              <input type="text" class="branchName" formControlName="branchId" />
+              <input type="number" class="branchName" formControlName="branchId"  />
           <span>توضیحات</span>
-              <input type="text" class="branchDescription" formControlName="branchDescription" />
+              <input type="text" class="branchDescription" formControlName="branchDescription"  />
           <div class="branchDetailDiv">
             <div class="port">
               <span>Port</span>
-              <input type="text" formControlName="branchPort"/>
+              <input type="number" formControlName="branchPort" />
             </div>
             <div class="ipaddress">
               <span>Ip Address</span>
-              <input type="text" formControlName="branchIpAddress" />
+              <input type="text" formControlName="branchIpAddress"  />
             </div>
           </div>
           <span>لوگو</span>
-              <input type="file" class="logo" formControlName="branchLogoUrl" (change)="getUrl($event)">
+              <input type="file" class="logo" formControlName="ImageBase64" (change)="upload($event.target)" required />
           <div class="status">
           <span>فعال</span>
-              <input type="checkbox" class="active" name="" id="" formControlName="branchIsActive">
+              <input type="checkbox" class="active" name="" id="" formControlName="branchIsActive"  />
           </div>
         </div>
         <div class="formBtn">
