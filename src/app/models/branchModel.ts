@@ -28,6 +28,4 @@ export interface branch {
     BranchDescription : string;
     BranchIsActive : boolean;
     ImageBase64 : string
-
-
 }
