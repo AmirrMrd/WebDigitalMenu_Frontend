@@ -1,41 +1,104 @@
-<div class="main">
-    <div class="firstDiv">
-      <div class="branchLogo">
-          <div class="branchimg">
-          <img *ngIf="ImgUrl == ''" src="../../../assets/background/Square_200x200.png" alt="">
-          <img [src]="ImgUrl" alt="">
-          </div>
+<div class="container d-flex justify-content-center align-items-center h-100">
+  <div class="firstDiv">
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">کد شعبه</label>
+        <input type="email" class="form-control" id="inputEmail4">
       </div>
-      <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch()">
-        <div class="formDiv">
-          <span>نام شعبه</span>
-              <input type="text" class="branchName" formControlName="branchName" />
-              <div *ngIf="submitted && f['branchName'].invalid">اسم شعبه اجباری است</div>
-          <span>کد شعبه</span>
-              <input type="number" class="branchName" formControlName="branchId"  />
-          <span>توضیحات</span>
-              <input type="text" class="branchDescription" formControlName="branchDescription"  />
-          <div class="branchDetailDiv">
-            <div class="port">
-              <span>Port</span>
-              <input type="number" formControlName="branchPort" />
-            </div>
-            <div class="ipaddress">
-              <span>Ip Address</span>
-              <input type="text" formControlName="branchIpAddress"  />
-            </div>
-          </div>
-          <span>لوگو</span>
-              <input type="file" class="logo" formControlName="ImageBase64" (change)="upload($event.target)" required />
-          <div class="status">
-          <span>فعال</span>
-              <input type="checkbox" class="active" name="" id="" formControlName="branchIsActive"  />
-          </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">نام شعبه</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">توضیحات</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">لوگو</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div> 
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
         </div>
-        <div class="formBtn">
-          <button type="submit">ثبت</button>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="main">
+    <div class="firstDiv">
+      <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch()">
+        <div class="input-item-logo">
+            <div class="branchLogo">
+              <div class="branchimg">
+              <img *ngIf="ImgUrl == ''" src="../../../assets/background/Square_200x200.png" alt="">
+              <img [src]="ImgUrl" alt="">
+              </div>
+            </div>
+          </div>
+        <div class="input-group">
+          <div class="input-item">
+            <span>نام شعبه</span>
+            <input type="text" class="branchName" formControlName="branchName" />
+            <div *ngIf="submitted && f['branchName'].invalid">اسم شعبه اجباری است</div>
+          </div>
+          <div class="input-item">
+            <span>کد شعبه</span>
+              <input type="number" class="branchName" formControlName="branchId"  />
+          </div>
+          <div class="input-item">
+            <span>توضیحات</span>
+              <input type="text" class="branchDescription" formControlName="branchDescription"  />
+          </div>
+          <div class="input-item">
+            <div class="input-network">
+              <div class="port">
+                <span>Port</span>
+                <input id="port-input" type="number" formControlName="branchPort" />
+              </div>
+              <div class="ipaddress">
+                <span>Ip Address</span>
+                <input id="ip-input" type="text" formControlName="branchIpAddress"  />
+              </div>
+            </div>
+            </div>
+          <div class="input-item">
+            <span>لوگو</span>
+            <input type="file" class="logo" formControlName="ImageBase64" (change)="upload($event.target)" required />
+          </div>
+          <div class="input-item">
+            <div class="status">
+              <span>فعال</span>
+                  <input type="checkbox" class="active" name="" id="" formControlName="branchIsActive"  />
+              </div>
+          </div>
+          <div class="input-btn">
+            <button type="submit">ثبت</button>
+        </div>
         </div>
       </form>
     </div>
   </div>
-  
+   -->

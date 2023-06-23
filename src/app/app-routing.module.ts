@@ -10,7 +10,7 @@ import { NotFoundComponent } from './account/not-found/not-found.component';
 const routes: Routes = [
   { path : '' , component : HomeComponent },
   { path : 'login' , component : LoginComponent },
-  { path : 'add-branch' , component : AddBranchComponent , canActivate : [AuthGuard] },
+  { path : 'add-branch' , component : AddBranchComponent},
   { path : '**' , component : NotFoundComponent },
   { path : 'register' , component : RegisterComponent },
 
