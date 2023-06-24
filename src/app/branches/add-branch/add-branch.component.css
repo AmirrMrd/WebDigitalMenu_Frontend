@@ -1,3 +1,68 @@
+#input-network {
+  direction: ltr;
+}
+label {
+  font-weight: bolder !important;
+}
+
+form {
+  padding: 3%;
+  background-color: rgba(187, 248, 240, 0.61);
+}
+
+img {
+  max-width: 300px;
+  max-height: 200px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 200px) { 
+    
+}
+@media (max-width: 600px) { 
+  form {
+    padding: 10%;
+}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  button {
+    width: 30% !important;
+}
+}
+@media (max-width: 768px) { 
+  
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+   
+ }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+  
+ }
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+    
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .main {
     display: flex;
     justify-content: center;
@@ -11,15 +76,15 @@
     background-size: cover; */
   /* } */
   
-  .firstDiv {
+  /* .firstDiv { */
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    background-color: rgba(187, 248, 240, 0.61);
+    /* background-color: rgba(187, 248, 240, 0.61);
     border-radius: 2%;
     padding: 2%;
   }
-  
+   */
   /* .input-group {
     display: flex;
     flex-direction: column;
@@ -178,31 +243,4 @@
   
   
   
-    /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 200px) { 
-  /* input {
-      padding: 15px;
-  } */
-  
-}
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-  /* input {
-    padding: 9px;
-} */
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
-  
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
-  
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
-  
-}
+ 
