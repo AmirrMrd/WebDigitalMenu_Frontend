@@ -1,53 +1,62 @@
-<div class="container d-flex justify-content-center align-items-center h-100">
-    <form>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <form [formGroup]="addBranchForm" (ngSubmit)="submitBranch()">
       <div class="row mb-3">
         <div class="col d-flex justify-content-center">
-          <img *ngIf="ImgUrl == ''" src="../../../assets/background/Square_200x200.png" alt="">
+          <img *ngIf="ImgUrl == ''" src="../../../assets/background/SepidzLogo.jpg" alt="">
           <img [src]="ImgUrl" alt="">
         </div>
         </div>
       <div class="row mb-3">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">کد شعبه</label>
-          <input type="email" class="form-control line-height-btn-xsm" id="inputEmail4">
+          <label for="BranchId" class="form-label">کد شعبه</label>
+          <input type="number" formControlName="branchId" class="form-control line-height-btn-xsm" id="BranchId">
+          <div style="color: red;" *ngIf="submitted && f['branchId'].invalid">کد شعبه یه درستی پر نشده است</div>
         </div>
         <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">نام شعبه</label>
-          <input type="password" class="form-control line-height-btn-xsm" id="inputPassword4">
+          <label for="BranchName" class="form-label">نام شعبه</label>
+          <input type="text" formControlName="branchName" class="form-control line-height-btn-xsm" id="BranchName">
+          <div class="invalid-feedback">
+            Looks good!
+          </div>
+          <div style="color: red;" *ngIf="submitted && f['branchName'].invalid">نام شعبه اجباری است</div>
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-12 mb-3">
-          <label for="inputAddress" class="form-label">توضیحات</label>
-          <input type="text" class="form-control line-height-btn-xsm" id="inputAddress" placeholder="">
+          <label for="DranchDescription" class="form-label">توضیحات</label>
+          <input type="text" formControlName="branchDescription" class="form-control line-height-btn-xsm" id="DranchDescription" placeholder="">
         </div>
         <div class="col-12">
-          <label for="inputAddress2" class="form-label">لوگو</label>
-          <input type="file" placeholder="فایل" class="form-control line-height-btn-xsm" formControlName="ImageBase64" (change)="upload($event.target)" required />
+          <label for="Branchlogo" class="form-label">لوگو</label>
+          <input type="file" id="Branchlogo" formControlName="ImageBase64" (change)="upload($event.target)" placeholder="فایل" class="form-control line-height-btn-xsm" (change)="upload($event.target)" />
+          <div style="color: red;" *ngIf="submitted && f['ImageBase64'].invalid">انتخاب لوگو اجباری است</div>
         </div>
       </div>
       <div class="row mb-3" id="input-network">
         <div class="col-8">
-          <label for="inputCity" class="form-label">IpAddress</label>
-          <input type="text" class="form-control line-height-btn-xsm" id="inputCity">
+          <label for="IpAddress" class="form-label">IpAddress</label>
+          <input type="text" formControlName="branchIpAddress" class="form-control line-height-btn-xsm" id="IpAddress" required>
+          <div style="color: red;" *ngIf="f['branchIpAddress'].invalid && f['branchIpAddress'].dirty">آدرس سرور به درستی وارد نشده است</div>
         </div>
         <div class="col-4">
-          <label for="inputCity" class="form-label">Port</label>
-          <input type="text" class="form-control line-height-btn-xsm" id="inputCity">
+          <label for="Port" class="form-label">Port</label>
+          <input type="text" formControlName="branchPort" class="form-control line-height-btn-xsm" id="Port">
+          <div style="color: red;" *ngIf="f['branchPort'].invalid && f['branchPort'].dirty">شماره پورت اشتباه میباشد</div>
         </div>
       </div>
       <div class="row mb-3">
         <div class="col-12">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
+            <input class="form-check-input" formControlName="branchIsActive" type="checkbox" id="IsActive">
+            <label class="form-check-label" for="IsActive">
               شعبه فعال میباشد
             </label>
           </div>
         </div>
       </div>
       <div class="col-12 d-flex justify-content-center mt-5">
-        <button type="submit" class="btn btn-success line-height-btn-xsm w-50">ثبت اطلاعات</button>
+        <button type="submit" [disabled]="addBranchForm.invalid" class="btn btn-success line-height-btn-xsm w-50">ثبت اطلاعات</button>
       </div>
     </form>
   </div>

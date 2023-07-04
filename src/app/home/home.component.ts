@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getAllBranches();
   }
+  public items  = [
+    { name : 'amir' , family : 'alimoradi'},
+    { name : 'amir' , family : 'alimoradi'},
+    { name : 'amir' , family : 'alimoradi'}
+  ]
 
   public getAllBranches() {
     this.branchSer.getAllBranch().subscribe((data) => {

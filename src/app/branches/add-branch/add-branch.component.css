@@ -7,7 +7,9 @@ label {
 
 form {
   padding: 3%;
-  background-color: rgba(187, 248, 240, 0.61);
+  background: rgba(229.50, 229.50, 229.50, 0.50);
+  backdrop-filter: blur(40px);
+  border-radius: 16px;
 }
 
 img {
@@ -20,9 +22,7 @@ img {
     
 }
 @media (max-width: 600px) { 
-  form {
-    padding: 10%;
-}
+  
 }
 
 /* Medium devices (tablets, 768px and up) */

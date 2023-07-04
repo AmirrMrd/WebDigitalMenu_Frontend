@@ -6,8 +6,11 @@ label {
 
 
 form {
-    padding: 3%;
-    background-color: rgba(187, 248, 240, 0.61);
+  padding: 3%;
+  background: rgba(229.50, 229.50, 229.50, 0.50);
+  backdrop-filter: blur(40px);
+  border-radius: 16px;
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -39,3 +42,10 @@ form {
 @media (min-width: 1400px) { 
     
  }
+
+
+
+
+
+
+ 

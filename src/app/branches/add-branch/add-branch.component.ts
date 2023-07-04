@@ -32,10 +32,11 @@ export class AddBranchComponent implements OnInit {
       branchName: ['',[Validators.required , Validators.minLength(3)]],
       branchDescription: ['' , Validators.required],
       branchPort: [ null , Validators.required],
-      branchIpAddress: [ null ,Validators.required],
+      branchIpAddress: [ null ,[Validators.required, Validators.pattern('(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?(\.|$)){4}')
+    ]],
       branchIsActive: [false , Validators.requiredTrue],
-      ImageBase64: ['', Validators.required]
-    })
+      ImageBase64: [null, Validators.required]
+    });
   }
 
   branchUrlbase64 = '';
@@ -70,7 +71,6 @@ export class AddBranchComponent implements OnInit {
 }
 
   submitBranch(): void {
-    
     if (this.addBranchForm.invalid) {
       this.submitted = true;
       return console.error("فرم به درستی پر نشده است");
@@ -80,6 +80,7 @@ export class AddBranchComponent implements OnInit {
       newBranch.ImageBase64 = this.obj.photoUrl;
       this.branchSer.createBranch(newBranch).subscribe((data) => {
       console.log(data);
+      this.addBranchForm.reset();
       });
 
       this.addBranchForm.reset();

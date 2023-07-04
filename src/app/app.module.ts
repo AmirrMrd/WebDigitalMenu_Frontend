@@ -11,6 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './account/not-found/not-found.component';
 import { EditComponent } from './branches/edit-branch/edit-branch.component';
+import { AdminComponent } from './admin/admin.component';
+import { ManageAccountsComponent } from './account/manage-accounts/manage-accounts.component';
+import { ManageBranchesComponent } from './branches/manage-branches/manage-branches.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { EditComponent } from './branches/edit-branch/edit-branch.component';
     AddBranchComponent,
     HomeComponent,
     NotFoundComponent,
-    EditComponent
+    EditComponent,
+    AdminComponent,
+    ManageAccountsComponent,
+    ManageBranchesComponent,
+
   ],
   imports: [
     BrowserModule,

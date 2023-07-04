@@ -18,14 +18,23 @@ export class AccountService {
   }
 
   public login (user : string , password : string) {
-    if (user === 'S' && password === '123') {
+    if (user === 's' && password === '1') {
       this.loggedIn = true;
-      this.router.navigate(['add-branch']);
+      this.router.navigate(['admin']);
       return this.loggedIn;
     }
     else {
       this.loggedIn = false;
       return this.loggedIn;
+    }
+  }
+
+  public register (user : string , password : string  , mobile : string) {
+    if (user === null ||  password === null ||  mobile === null) {
+      return console.log('registered'); 
+    }
+    else {
+      return console.log('Not Registered');
     }
   }
 }
